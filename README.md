@@ -4,8 +4,8 @@
 
 --------------------------------------------------
 - This Project Was Written in :
-  1) Html
-  2) Css
+  - Html
+  - Css
 
 - Designed Using : 
-  1) Adobe XD
+  - Adobe XD
