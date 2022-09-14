@@ -1,0 +1,228 @@
+/* Basic Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "poppins", sans-serif;
+    font-size: 62.5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #414141;
+    padding: 2rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* Header top */
+.header{
+    color: white;
+    text-align: center;
+    font-size: 4.4rem;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+.header::after{
+    content: "";
+    width: 9.3rem;
+    height: .6rem;
+    background-color: #FFB200;
+    position: absolute;
+    border-radius: 4rem;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/* Cards */
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-down,
+.card-up{
+    width: 23.2rem;
+    height: 24.1rem;
+    padding: 2rem;
+    background-color: #A7A7A7;
+    border: solid #FFB200;
+    text-align: center;
+    margin-bottom: 5rem;
+    border-radius: 50% 50% 1rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* images */
+.img-black,
+.img-white{
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3rem;
+    z-index: 98;
+    transition: width .5s;
+}
+
+.img-black-first{
+    width: 12rem;
+}
+
+.img-black:hover{
+    width: 15rem;
+}
+
+.img-black-first:hover{
+    width: 17rem;
+}
+
+.img-black-second{
+    top: -5rem;
+}
+
+/* Info */
+.info{
+    margin-top: 10rem;
+}
+
+.title{
+    color: white;
+    font-size: 2rem;
+}
+
+.price{
+    background-color: white;
+    z-index: 999;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: #FFB200 solid 3px;
+    position: absolute;
+    right: .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .5s;
+    cursor: pointer;
+
+}   
+
+.price:hover{
+    transform: scale(1.3);
+}
+
+/* Button Styling */
+.btn{
+    color: #414141;
+    background-color: white;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    position: relative;
+    transition: background-color .5s;
+}
+
+.btn i{
+    position: absolute;
+    top: 1.4rem;
+}
+
+.btn:hover{
+    color: white;
+    background-color: #414141;
+}
+
+/* Media 1 */
+@media screen and (min-width: 700px) {
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-down, .card-up{
+        margin-left: 4rem;
+    }
+}
+
+/* Upper Cards */
+.up{
+    border-radius: 1rem 1rem 50% 50%;
+}
+
+.price-up{
+    top: -2.5rem;
+}
+
+.img-white{
+    width: 12rem;
+}
+
+.img-white-first{
+    width: 18rem;
+    top: -6rem;
+}
+
+.img-white-third{
+    width: 15rem;
+}
+
+.img-white:hover{
+    width: 20rem;
+}
+
+.img-white-first:hover{
+    width: 24rem;
+}
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.card-down:nth-child(1){
+    animation: fadeIn .5s .5s backwards;
+}
+.card-down:nth-child(2){
+    animation: fadeIn .5s 1s backwards;
+}
+.card-down:nth-child(3){
+    animation: fadeIn .5s 1.5s backwards;
+}
+.card-down:nth-child(4){
+    animation: fadeIn .5s 2s backwards;
+}
+.card-up:nth-child(1){
+    animation: fadeIn .5s .5s backwards;
+}
+.card-up:nth-child(2){
+    animation: fadeIn .5s 1s backwards;
+}
+.card-up:nth-child(3){
+    animation: fadeIn .5s 1.5s backwards;
+}
+.card-up:nth-child(4){
+    animation: fadeIn .5s 2s backwards;
+}
